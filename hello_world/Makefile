@@ -1,4 +1,4 @@
-PROG = hello
+PROG = app
 SRC = hello.vala
 CSRC = hello.c
 
@@ -8,7 +8,7 @@ $(CSRC): $(SRC)
 	valac -C $<
 
 $(PROG): $(SRC)
-	valac $<
+	valac $< -o $@
 
 clean:
 	rm -f $(CSRC) $(PROG)
